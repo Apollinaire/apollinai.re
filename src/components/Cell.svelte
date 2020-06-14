@@ -1,21 +1,16 @@
 <script>
-  import classnames from "classnames"
+  import classnames from 'classnames';
+  import { universe } from '../gameOfLife/listLife.ts';
 
-  const doNothing = () => {
-    console.log("do nothing")
-  }
-
-  export let isActive
-  export let toggle
-  export let x
-  export let y
+  export let x;
+  export let y;
 </script>
 
 <style>
   div {
     border: 1px solid black;
-    width: 22px;
-    height: 22px;
+    width: 40px;
+    height: 40px;
     cursor: pointer;
     background-color: bisque;
   }
@@ -27,4 +22,4 @@
   }
 </style>
 
-<div class={classnames({ active: !!isActive(x,y) })} on:click={() =>toggle(x,y)} ></div>  
+<div class={classnames({ active: ($universe[y] || {})[x] })} on:click={() => {universe.toggle(x, y)}} />
