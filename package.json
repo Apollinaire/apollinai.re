@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "sapper dev",
     "build": "sapper build --legacy",
-    "export": "sapper export --legacy && mv docs/CNAME __sapper__/export; rm -r docs/*; mv __sapper__/export/* docs",
+    "export": "sapper export --legacy && rm -r docs/*; mv __sapper__/export/* docs && cp CNAME docs/CNAME",
     "start": "node __sapper__/build",
     "cy:run": "cypress run",
     "cy:open": "cypress open",
