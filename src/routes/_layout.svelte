@@ -1,14 +1,13 @@
 <script>
-  import Nav from "../components/Nav.svelte"
-
-  export let segment
+  // import Nav from "../components/Nav.svelte"
+  // export let segment;
 </script>
 
 <style>
   main {
     flex-grow: 1;
     position: relative;
-    background-color: white;
+    background-color: #ffffef;
     margin: 0 auto;
     box-sizing: border-box;
     width: 100%;
@@ -25,7 +24,7 @@
   }
 </style>
 
-<Nav {segment} />
+<!-- <Nav {segment} /> -->
 
 <main>
   <slot />

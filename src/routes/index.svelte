@@ -1,63 +1,77 @@
 <script>
-  import { onMount } from 'svelte';
-  import NextGen from '../components/NextGen.svelte';
-  let GameOfLife;
-
-  onMount(async () => {
-    const module = await import('../components/GOL.svelte');
-    GameOfLife = module.default;
-  });
+  import Logo from '../components/Logo.svelte';
+  import Social from '../components/Social.svelte';
+  import Contact from '../components/Contact.svelte';
 </script>
 
 <style>
   h1,
-  figure,
-  p {
-    text-align: center;
-    margin: 0 auto;
-  }
-
   h1 {
-    font-size: 2.8em;
+    font-size: 1.8em;
     text-transform: uppercase;
     font-weight: 700;
     margin: 0 0 0.5em 0;
   }
 
-  figure {
-    margin: 0 0 1em 0;
+  .two-column {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
-  img {
-    width: 100%;
-    max-width: 400px;
-    margin: 0 0 1em 0;
+  .item {
+    flex-grow: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 16px;
   }
 
-  p {
-    margin: 1em auto;
+  .start {
+    align-items: flex-start;
   }
 
-  @media (min-width: 480px) {
-    h1 {
-      font-size: 4em;
+  .logo-wrapper {
+    width: 120px;
+    height: 120px;
+  }
+
+  .centered {
+    align-items: center;
+    text-align: center;
+  }
+
+  @media (max-width: 480px) {
+    .two-column {
+      flex-direction: column;
+    }
+    .start {
+      align-items: center;
     }
   }
 </style>
 
 <svelte:head>
-  <title>Sapper project template</title>
+  <title>Apollinaire - Freelance Software Engineer</title>
 </svelte:head>
 
-<h1>Great success!</h1>
-<NextGen />
-<svelte:component this={GameOfLife} />
+<div class="two-column">
+  <div class="item centered">
 
-<figure>
-  <img alt="Borat" src="great-success.png" />
-  <figcaption>HIGH FIVE!</figcaption>
-</figure>
+    <div class="logo-wrapper">
+      <Logo />
+    </div>
+  </div>
+  <div class="item centered">
+    <div >
+      <h1>Apollinaire</h1>
+      <p>Freelance software engineer</p>
+      <p>
+      <Contact /></p>
+      <Social />
+    </div>
+  </div>
 
-<p>
-  <strong>Try editing this file (src/routes/index.svelte) to test live reloading.</strong>
-</p>
+</div>
