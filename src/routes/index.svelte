@@ -28,11 +28,6 @@
     justify-content: center;
     margin: 16px;
   }
-
-  .start {
-    align-items: flex-start;
-  }
-
   .logo-wrapper {
     width: 120px;
     height: 120px;
@@ -46,9 +41,6 @@
   @media (max-width: 480px) {
     .two-column {
       flex-direction: column;
-    }
-    .start {
-      align-items: center;
     }
   }
 </style>
@@ -65,11 +57,12 @@
     </div>
   </div>
   <div class="item centered">
-    <div >
+    <div>
       <h1>Apollinaire</h1>
       <p>Freelance software engineer</p>
       <p>
-      <Contact /></p>
+        <Contact />
+      </p>
       <Social />
     </div>
   </div>
