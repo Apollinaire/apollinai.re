@@ -46,6 +46,7 @@
 </style>
 
 <svelte:head>
+  <meta name="description" content="Apollinaire Lecocq is a freelance software engineer, specialized in modern Javascript." />
   <title>Apollinaire - Freelance Software Engineer</title>
 </svelte:head>
 
