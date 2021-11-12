@@ -1,3 +1,7 @@
+<button on:click>
+  <slot />
+</button>
+
 <style>
   button {
     display: inline;
@@ -12,24 +16,18 @@
     cursor: pointer;
     -webkit-appearance: none;
     -moz-appearance: none;
-}
+  }
 
-button {
-  text-decoration: underline;
-}
-button:hover,
-button:focus {
-    text-decoration:#D65DAF underline;
-    color: #D65DAF;
-}
-button:focus {
-  outline: -webkit-focus-ring-color auto 1px;
-  outline-offset: 1px;
-}
-
-
+  button {
+    text-decoration: underline;
+  }
+  button:hover,
+  button:focus {
+    text-decoration: #d65daf underline;
+    color: #d65daf;
+  }
+  button:focus {
+    outline: -webkit-focus-ring-color auto 1px;
+    outline-offset: 1px;
+  }
 </style>
-
-<button on:click >
-  <slot />
-</button>

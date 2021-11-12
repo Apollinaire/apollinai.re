@@ -2,7 +2,35 @@
   import Logo from '../components/Logo.svelte';
   import Social from '../components/Social.svelte';
   import Contact from '../components/Contact.svelte';
+  import Layout from '../components/Layout.svelte';
 </script>
+
+<svelte:head>
+  <meta
+    name="description"
+    content="Apollinaire Lecocq is a freelance software engineer, specialized in modern Javascript."
+  />
+  <title>Apollinaire - Freelance Software Engineer</title>
+</svelte:head>
+<Layout>
+  <div class="two-column">
+    <div class="item centered">
+      <div class="logo-wrapper">
+        <Logo />
+      </div>
+    </div>
+    <div class="item centered">
+      <div>
+        <h1>Apollinaire</h1>
+        <p>Freelance software engineer</p>
+        <p>
+          <Contact />
+        </p>
+        <Social />
+      </div>
+    </div>
+  </div>
+</Layout>
 
 <style>
   h1,
@@ -44,28 +72,3 @@
     }
   }
 </style>
-
-<svelte:head>
-  <meta name="description" content="Apollinaire Lecocq is a freelance software engineer, specialized in modern Javascript." />
-  <title>Apollinaire - Freelance Software Engineer</title>
-</svelte:head>
-
-<div class="two-column">
-  <div class="item centered">
-
-    <div class="logo-wrapper">
-      <Logo />
-    </div>
-  </div>
-  <div class="item centered">
-    <div>
-      <h1>Apollinaire</h1>
-      <p>Freelance software engineer</p>
-      <p>
-        <Contact />
-      </p>
-      <Social />
-    </div>
-  </div>
-
-</div>

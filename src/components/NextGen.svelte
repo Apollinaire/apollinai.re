@@ -1,5 +1,5 @@
 <script>
-  import { universe } from '../gameOfLife/listLife.ts';
+  import { universe } from '../gameOfLife/listLife';
   function onClick() {
     universe.nextGeneration();
   }

@@ -2,6 +2,10 @@
   export let href;
 </script>
 
+<a {href} {...$$props}>
+  <slot />
+</a>
+
 <style>
   a:focus,
   a:hover {
@@ -9,7 +13,3 @@
     color: #d65daf;
   }
 </style>
-
-<a {href} {...$$props}>
-  <slot />
-</a>

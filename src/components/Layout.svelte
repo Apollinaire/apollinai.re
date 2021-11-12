@@ -3,6 +3,12 @@
   // export let segment;
 </script>
 
+<!-- <Nav {segment} /> -->
+
+<main>
+  <slot />
+</main>
+
 <style>
   main {
     flex-grow: 1;
@@ -17,15 +23,9 @@
     height: 100%;
   }
 
-  :global(#sapper) {
+  :global(#svelte) {
     height: 100%;
     display: flex;
     flex-direction: column;
   }
 </style>
-
-<!-- <Nav {segment} /> -->
-
-<main>
-  <slot />
-</main>

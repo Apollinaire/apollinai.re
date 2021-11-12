@@ -1,10 +1,17 @@
 <script>
   import classnames from 'classnames';
-  import { universe } from '../gameOfLife/listLife.ts';
+  import { universe } from '../gameOfLife/listLife';
 
   export let x;
   export let y;
 </script>
+
+<div
+  class={classnames({ active: ($universe[y] || {})[x] })}
+  on:click={() => {
+    universe.toggle(x, y);
+  }}
+/>
 
 <style>
   div {
@@ -21,5 +28,3 @@
     background-color: hotpink;
   }
 </style>
-
-<div class={classnames({ active: ($universe[y] || {})[x] })} on:click={() => {universe.toggle(x, y)}} />
